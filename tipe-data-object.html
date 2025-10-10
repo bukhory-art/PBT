@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data object </title>
+</head>
+<body>
+    <script>
+    
+    //property
+       const person = {
+        nama:"Muhammad Al Bukhori",
+        alamat:"Sudiang",
+        umur : 30
+       };
+
+    //Menghapus
+    delete person["umur"];   
+       
+
+    //ubah property / attribute
+       person["nama"] = "Muhammad Al Bukhori";
+       person["alamat"] = "Sudiang";
+       person["umur"] = 17;
+
+       console.info(`Nama : ${person.nama}`)
+       console.info(`Alamat : $person.alamat}`)
+       console.info(`Umur : ${person.umur}`)
+
+     console.table(person);
+    
+
+    </script>
+</body>
+</html>
