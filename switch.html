@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nilai = "A"; //patokan nilai
+
+        switch (nilai) { 
+            case "A": //pengecekan pertama
+                document.writeln("<p>Wow Anda Lulus Dengan Baik</p>");
+                break;
+            case "B": //pengecekan kedua ketika gagal sebelumnya
+
+            case "C": //pengecekan ketiga ketika gagal sebelumnya
+                document.writeln(
+                "<p>Anda Lulus</p>"
+            );
+
+                break; //keluar dari switch
+
+            case "D": //pengecekan selanjutnya
+                document.writeln("<p>Anda Tidak Lulus</p>");
+
+                break;
+
+            default:
+                document.writeln("<p>Mungkin Anda Salah Jurusan</p>");
+        }
+
+        if (nilai ==="A") {
+            document.writeln("<p>Wow Anda Lulus Dengan Baik</p>");
+        } else if (nilai === "B" || nilai === "C") {
+            document.writeln ("<p>Anda Lulus</p>");
+        } else if (nilai === "D") {
+            document.writeln("<p>Anda Tidak Lulus</p>");
+        } else {
+            document.writeln("<p>Mungkin Anda Salah Jurusan</p>");
+        }
+
+        //pengecekan akan terus dilanjutkan sampai ditemukan nilainya
+    </script>
+
+    
+
+</body>
+</html>
