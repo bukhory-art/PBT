@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            addres: {
+                country: "Indonesia",
+            },
+        }; //Membuat objek bernama person.Objek ini punya property addres (perhatikan: salah eja dari address),dan di dalamnya ada property country = "Indonesia".
+
+        let country = person?.address?.country; //Di sini digunakan optional chaining (?.).Artinya:Cek dulu apakah person ada,lalu apakah person.address ada,baru ambil country.Tapi... di objek kamu, namanya addres, bukan address (kurang satu huruf “d”).Karena itu, person.address = undefined,maka hasil country = undefined.
+        
+        
+        //if(person.address !== undefined && person.address !== null){country = person.addres.country;} Ini adalah cara lama (manual) untuk melakukan hal yang sama dengan optional chaining.
+
+        document.writeln(`SUKSES`); //Menulis teks "SUKSES" ke halaman web.
+
+        document.writeln(`<p>${country}</p>`); //Menampilkan isi variabel country di dalam tag <p>.
+
+        document.writeln(`SUKSES`); //Menulis lagi kata “SUKSES” ke halaman web.
+    </script>
+</body>
+</html>

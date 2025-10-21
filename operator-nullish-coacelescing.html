@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let parameter; //Membuat variabel bernama parameter tetapi belum diisi, jadi nilainya undefined
+
+        let data = parameter; //Membuat variabel baru data dan mengisinya dengan nilai parameter. Karena parameter belum diisi, maka data = undefined.
+        if (data === undefined || data === null) {
+            data = "Nilai Default";
+        } //Mengecek apakah data bernilai undefined atau null
+        //Jika iya, maka data diganti menjadi "Nilai Default"
+
+        document.writeln(`<p>${data}</p>`); //Menulis hasil data ke halaman web di dalam tag <p> (paragraf)
+
+        data = parameter ?? "Nilai Default"; //Menggunakan operator nullish coalescing (??).Artinya: kalau parameter undefined atau null, maka gunakan "Nilai Default". Karena parameter masih undefined, hasilnya tetap "Nilai Default".
+
+        document.writeln(`<p>${data}</p>`); //Menampilkan lagi nilai data ke halaman web. Jadi akan muncul dua baris tulisan “Nilai Default” di browser.
+        
+    </script>
+</body>
+</html>

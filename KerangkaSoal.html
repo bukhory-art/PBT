@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+<script>
+let pilihan;
+
+do {
+    // Tampilkan menu menggunakan popup
+    pilihan = prompt(
+        "KALKULATOR SEDERHANA\n" +
+        "1. Penjumlahan\n" +
+        "2. Pengurangan\n" +
+        "3. Perkalian\n" +
+        "4. Pembagian\n" +
+        "5. Keluar\n\n" +
+        "Masukkan pilihan (1-5):"
+    );
+
+    // Konversi ke angka
+    pilihan = parseInt(pilihan);
+
+    // Validasi input menu
+    while (isNaN(pilihan) || pilihan < 1 || pilihan > 5) {
+        pilihan = parseInt(prompt("Pilihan tidak valid! Masukkan angka antara 1 - 5:"));
+    }
+
+    if (pilihan >= 1 && pilihan <= 4) {
+        // Meminta dua angka
+        let a = parseFloat(prompt("Masukkan angka pertama:"));
+        let b = parseFloat(prompt("Masukkan angka kedua:"));
+
+        // Validasi pembagian agar tidak dengan nol
+        if (pilihan === 4) {
+            while (b === 0) {
+                b = parseFloat(prompt("Pembagi tidak boleh nol! Masukkan ulang angka kedua:"));
+            }
+        }
+
+        let hasil;
+
+        // Proses operasi
+        switch (pilihan) {
+            case 1:
+                hasil = a + b;
+                alert("Hasil Penjumlahan: " + hasil);
+                break;
+            case 2:
+                hasil = a - b;
+                alert("Hasil Pengurangan: " + hasil);
+                break;
+            case 3:
+                hasil = a * b;
+                alert("Hasil Perkalian: " + hasil);
+                break;
+            case 4:
+                hasil = a / b;
+                alert("Hasil Pembagian: " + hasil);
+                break;
+        }
+    } else if (pilihan === 5) {
+        alert("Terima kasih, program selesai!");
+    }
+
+} while (pilihan !== 5);
+</script>
+</body>
+</html>
