@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas</title>
+</head>
+<body>
+    <script>
+        let nilai1 = parseFloat(prompt("Masukkan nilai pertama:"));
+        let nilai2 = parseFloat(prompt("Masukkan nilai kedua:"));
+
+        let pilihan = parseInt(prompt(
+            "Pilih operasi:\n" +
+            "1.Luas Persegi\n" +
+            "2.Luas Segitiga"
+        ));
+
+        let hasil;
+
+        if (pilihan === 1) {
+            hasil = nilai1 * nilai2;
+            alert("Luas Persegi = " + hasil);
+        }
+
+        else if (pilihan === 2) {
+            hasil = 0.5 * nilai1 * nilai2;
+            alert("Luas Segitiga = " + hasil);
+        }
+
+        else {
+            alert("Pilihan tidak valid!");
+        }
+    </script>
+</body>
+</html>
